@@ -190,7 +190,8 @@ const seconds = timeNodes
     const [mins, secs] = timeCode.split(':').map(parseFloat);
     console.log(mins, secs);
     return (mins * 60) + secs;
-  });
+  })
+  .reduce((total, totalSeconds) => total + totalSeconds);
 
 
 console.log(timeNodes);
